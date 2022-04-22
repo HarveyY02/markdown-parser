@@ -28,6 +28,9 @@ public class MarkdownParse {
             if (markdown.lastIndexOf(")") < currentIndex) {
                 break;
             }
+            int openParen2 = markdown.indexOf("(", closeParen);
+            int closeParen2 = markdown.indexOf(")", closeParen);
+            toReturn.add(markdown.substring(openParen2, closeParen2));
         }
         return toReturn;
     }
