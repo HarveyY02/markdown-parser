@@ -75,6 +75,7 @@ public class MarkdownParseTest {
     //     String content = Files.readString(fileName);
     //     assertEquals(List.of(), MarkdownParse.getLinks(content));
     // }
+<<<<<<< Updated upstream
 
     // @Test
     // public void testfile8CorrectLinks() throws IOException {
@@ -90,5 +91,14 @@ public class MarkdownParseTest {
         assertEquals(List.of("https://something.com", "some-thing.html"), 
         MarkdownParse.getLinks(content));
     }
+=======
+
+    // @Test
+    // public void testfile8CorrectLinks() throws IOException {
+    //     Path fileName = Path.of("test-file8.md");
+    //     String content = Files.readString(fileName);
+    //     assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(content));
+    // }
+>>>>>>> Stashed changes
 
 }
