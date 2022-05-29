@@ -75,7 +75,6 @@ public class MarkdownParseTest {
     //     String content = Files.readString(fileName);
     //     assertEquals(List.of(), MarkdownParse.getLinks(content));
     // }
-<<<<<<< Updated upstream
 
     // @Test
     // public void testfile8CorrectLinks() throws IOException {
@@ -83,22 +82,38 @@ public class MarkdownParseTest {
     //     String content = Files.readString(fileName);
     //     assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(content));
     // }
+
+    // @Test
+    // public void testfile2() throws IOException {
+    //     Path fileName = Path.of("test-file2.md");
+    //     String content = Files.readString(fileName);
+    //     assertEquals(List.of("https://something.com", "some-thing.html"), 
+    //     MarkdownParse.getLinks(content));
+    // }
+
 
     @Test
-    public void testfile2() throws IOException {
-        Path fileName = Path.of("test-file2.md");
+    public void snippet1() throws IOException {
+        Path fileName = Path.of("snippet1.md");
         String content = Files.readString(fileName);
-        assertEquals(List.of("https://something.com", "some-thing.html"), 
-        MarkdownParse.getLinks(content));
+        assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), 
+    MarkdownParse.getLinks(content));
     }
-=======
 
-    // @Test
-    // public void testfile8CorrectLinks() throws IOException {
-    //     Path fileName = Path.of("test-file8.md");
-    //     String content = Files.readString(fileName);
-    //     assertEquals(List.of("a link on the first line"), MarkdownParse.getLinks(content));
-    // }
->>>>>>> Stashed changes
+    @Test
+    public void snippet2() throws IOException {
+        Path fileName = Path.of("snippet2.md");
+        String content = Files.readString(fileName);
+        assertEquals(List.of("a.com)", "a.com(())", "example.com"), 
+    MarkdownParse.getLinks(content));
+    }
+
+    @Test
+    public void snippet3() throws IOException {
+        Path fileName = Path.of("snippet3.md");
+        String content = Files.readString(fileName);
+        assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"), 
+    MarkdownParse.getLinks(content));
+    }
 
 }
